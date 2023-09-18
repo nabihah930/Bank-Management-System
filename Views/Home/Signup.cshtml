@@ -1,0 +1,53 @@
+﻿@{
+    ViewBag.Title = "Sign up";
+    Layout = "~/Views/Shared/_WebsiteLayout.cshtml";
+}
+
+
+<div class="container" style="display: flex; align-content: center; justify-content: center; width: 700px;">
+    <div class="jumbotron text-center">
+        <h1>@ViewBag.Title</h1>
+        <h2 style="font-weight:lighter;">Create an Account</h2>
+        <hr /><br />
+        <form  action="Signup" method="post" style="align-content: center; justify-content: center; align-self:center;">
+            <div class="form-group">
+                <input type="text" class="form-control" id="cinc" name="cnic" placeholder="CNIC">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" id="name" name="name" placeholder="Full Name">
+            </div>
+            <div class="form-group">
+                <!--<label for="exampleFormControlInput1" style="font-weight: lighter;">Email address</label>-->
+                <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" id="acoountNo" name="acoountNo" placeholder="Account Number">
+            </div>
+            <br />
+            <button style="margin:10px;padding-left: 20px; padding-right: 20px;" type="submit" class="btn btn-default btn-block">Sign up</button>
+            <p>Already have an account? @Html.ActionLink("Login", "Login", "Home")</p>
+        </form>
+    </div>
+</div>
+
+<!--
+
+
+    <p><a class="btn btn-default btn-lg" href="#" role="button">Sign up</a></p>
+    <div class="card text-center">
+        <div class="card-header">
+            Featured
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Special title treatment</h5>
+            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+        <div class="card-footer text-muted">
+            2 days ago
+        </div>
+    </div>
+-->

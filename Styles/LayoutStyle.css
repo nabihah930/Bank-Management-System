@@ -1,0 +1,108 @@
+﻿body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: dimgray;
+}
+
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+    font-family: 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+}
+/*'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Changing background colour of navbar & the brand text colour & links */
+.navbar-custom{
+    background-color: white;
+}
+    .navbar-custom .navbar-brand,
+    .navbar-custom .navbar-text {
+        color: blueviolet;
+        font-weight: 500;
+        font-size: 30px;
+        height: 50px;
+        justify-content: center;
+    }
+.navbar-custom .navbar-brand:hover,
+.navbar-custom .navbar-text:hover {
+    color: #7617CE;
+}
+.navbar-custom .navbar-nav .nav-link {
+    color: blueviolet;
+    font-size: 20px;
+}
+.navbar-custom .navbar-nav .nav-link:hover {
+    color: #7617CE;
+}
+.navbar-custom .navbar-nav .nav-tabs {
+    color: gray;
+    font-size: 20px;
+}
+
+.navbar-custom .navbar-nav .nav-tabs:hover {
+    color: dimgray;
+}
+
+/* Changing default button's style*/
+.btn-default {
+    background-color: blueviolet;
+    color: #FFF;
+    border-color: blueviolet;
+    font-size: 16px;
+}
+.btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open .dropdown-toggle.btn-default {
+    background-color: #7617CE;
+    color: #FFF;
+    border-color: #7617CE;
+}
+/* All the customized footer styles */
+.custom-footer {
+    padding: 30px;
+    background-color: whitesmoke;
+    border-top-width: thick;
+    border-top-color: gainsboro;
+    border: 1px solid gainsboro;
+}
+
+.col-1{
+    padding:30px;
+}
+
+.row-1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.footer-heading1 {
+    color: blueviolet;
+    font-weight:lighter;
+}
+
+.footer-heading2 {
+    color: #ABABAB;
+    /*padding-top: 15px;*/
+    font-weight: lighter;
+    padding-left: 50px;
+}
+
+.footer-features{
+    padding-left: 50px;
+}
+
+.footer-links {
+    color: #B5B5B5;
+}
+.footer-links:hover {
+    color:gray;
+    text-decoration: none;
+}
+.footer-dscrp{
+    font-size: 16px;
+}
+
+.label-style{
+    font-weight: lighter;
+}

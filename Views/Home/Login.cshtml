@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_WebsiteLayout.cshtml";
+}
+
+<div  class="container" style="display: flex; align-content: center; justify-content: center; width: 1100px;">
+    <div class="jumbotron text-center">
+        <h1>@ViewBag.Title</h1>
+        <h2 style="font-weight:lighter;">Welcome Back!</h2>
+        <hr /><br />
+        <form action="Login" method="post" style="align-content: center; justify-content: center; align-self:center;">
+            <div class="form-group">
+                <input type="text" class="form-control" id="cnic" name="cnic" placeholder="CNIC">
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+            </div>
+            <br />
+            <button style="margin:10px;padding-left: 20px; padding-right: 20px;" type="submit" class="btn btn-default btn-block">Login</button>
+             <p>Don't have an account? @Html.ActionLink("Signup", "Signup", "Home")</p>
+        </form>
+    </div>
+</div>

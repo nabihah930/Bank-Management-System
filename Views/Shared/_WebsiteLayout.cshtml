@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Balance Books</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Styles.Render("~/Styles/LayoutStyle.css")
+    @RenderSection("script", false)
+</head>
+<body>
+    <div class="navbar navbar-default navbar-fixed-top navbar-custom">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand">
+                    <img src="~/logo.png" width="20" alt="Project Logo" class="d-inline-block align-middle mr-2">
+                </a>
+                @Html.ActionLink("Balance Books", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Features", "About", "Home", new { @class = "nav-tabs" })</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home", new { @class = "nav-tabs" })</li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li style="visibility: @ViewBag.Visible">@Html.ActionLink("Sign up", "Signup", "Home", new { @class = "nav-link" })</li>
+                    <li style="visibility: @ViewBag.GreetingVisible">@ViewBag.Greetings</li>
+                    <!--<li><a class="nav-link" href="~/Views/Home/Signup.cshtml" id="signup">Sign up</a></li>-->
+                    <!--<li><a class="nav-link" href="#" id="signin">Sign in</a></li>-->
+                    <button class="btn btn-default navbar-btn">@Html.ActionLink("Sign in", "Login", "Home", new { @class = "btn-default" })</button>
+                </ul>
+            </div>
+        </div>
+    </div>
+    @RenderSection("initialRow", false)
+    @RenderSection("alert", false)
+    <div class="container body-content">
+        @RenderBody()
+        <!--<hr/>-->
+        <br />
+    </div>
+    <footer>
+        <div class="container-fluid custom-footer">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="col-1">
+                        <div class="row-1">
+                            <img src="~/finance_logo_removebg.png" width="80" alt="Project Logo">
+                            <h4 style="color:whitesmoke;">w</h4>
+                            <h2 class="footer-heading1">Balance Books</h2>
+                        </div>
+                        <br />
+                        <div>
+                            <p class="footer-dscrp">
+                                An online finance management system, allowing you to track expenses, create household budgets,
+                                manage employee payroll, create income statements, balance sheets and much more.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <h3 class="footer-heading2">Features</h3><br />
+                    <div class="footer-features">
+                        <a class="footer-links">Deposits and Transfer</a><br /><br />
+                        <a class="footer-links">Household Budget Management</a><br /><br />
+                        <a class="footer-links">Income Statements</a><br /><br />
+                        <a class="footer-links">Billing Expenses/Easy Invoicing</a><br /><br />
+                        <a class="footer-links">Loans and Insurance</a><br /><br />
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <br /><br /><br /><br />
+                    <div class="footer-features">
+                        <a class="footer-links">Credit Card Discounts</a><br /><br />
+                        <a class="footer-links">Payroll Management</a><br /><br />
+                        <a class="footer-links">Balance Sheets</a>
+                        <a class="footer-links">Complaint Management</a><br /><br />
+                        <a class="footer-links">Expense Management</a><br /><br />
+                        <a class="footer-links">Loans and Insurrance</a><br /><br />
+                    </div>
+                </div>
+                <hr />
+            </div>
+            <br />
+            <br />
+            <br />
+            <p style="padding-left:30px;">&copy; @DateTime.Now.Year - Balance Books - k181297 & k180326 - WP Project</p>
+        </div>
+    </footer>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
